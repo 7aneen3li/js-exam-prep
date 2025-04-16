@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Exam Prep - Master in 2 Days</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <h1>JavaScript Exam Prep</h1>
+        <p class="tagline">Master all key concepts in just 2 days</p>
+        <div class="header-buttons">
+          <a href="#study-plan" class="btn btn-primary">Study Plan</a>
+          <a href="#resources" class="btn btn-secondary">Resources</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav" id="main-nav">
+    <div class="container">
+      <ul class="nav-list">
+        <li class="active"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="pages/arrays.html"><i class="fas fa-list-ol"></i> Arrays</a></li>
+        <li><a href="pages/objects.html"><i class="fas fa-cube"></i> Objects</a></li>
+        <li><a href="pages/loops.html"><i class="fas fa-redo"></i> Loops</a></li>
+        <li><a href="pages/es6.html"><i class="fab fa-js"></i> ES6+</a></li>
+        <li><a href="pages/dom.html"><i class="fas fa-code"></i> DOM</a></li>
+        <li><a href="pages/events.html"><i class="fas fa-mouse-pointer"></i> Events</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="intro-section">
+      <h2>Your Complete JavaScript Study Guide</h2>
+      <p>This comprehensive resource covers everything you need to know for your JavaScript exam, organized into a focused 2-day study plan with practical examples, exercises, and reference materials.</p>
+    </section>
+
+    <section class="study-plan" id="study-plan">
+      <h2>2-Day Intensive Study Plan</h2>
+      <div class="plan-container">
+        <div class="day-card day1">
+          <div class="day-header">
+            <h3>Day 1</h3>
+            <p>Core JavaScript</p>
+          </div>
+          <ul class="topics-list">
+            <li><i class="fas fa-check-circle"></i> Arrays & Methods</li>
+            <li><i class="fas fa-check-circle"></i> Objects & Prototypes</li>
+            <li><i class="fas fa-check-circle"></i> Loops & Iteration</li>
+            <li><i class="fas fa-check-circle"></i> ES6+ Features</li>
+            <li><i class="fas fa-check-circle"></i> Destructuring/Spread</li>
+          </ul>
+          <a href="resources/exercises/day1-exercises.js" class="btn btn-download">
+            <i class="fas fa-download"></i> Download Exercises
+          </a>
+        </div>
+
+        <div class="day-card day2">
+          <div class="day-header">
+            <h3>Day 2</h3>
+            <p>DOM & Events</p>
+          </div>
+          <ul class="topics-list">
+            <li><i class="fas fa-check-circle"></i> DOM Fundamentals</li>
+            <li><i class="fas fa-check-circle"></i> Element Selection</li>
+            <li><i class="fas fa-check-circle"></i> DOM CRUD Operations</li>
+            <li><i class="fas fa-check-circle"></i> Event Handling</li>
+            <li><i class="fas fa-check-circle"></i> Event Delegation</li>
+          </ul>
+          <a href="resources/exercises/day2-exercises.js" class="btn btn-download">
+            <i class="fas fa-download"></i> Download Exercises
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources" id="resources">
+      <h2>Study Resources</h2>
+      <div class="resources-grid">
+        <div class="resource-card pdf-resource">
+          <div class="resource-icon">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <h3>Cheat Sheet</h3>
+          <p>All key concepts condensed into a single PDF reference</p>
+          <a href="resources/cheat-sheet.pdf" class="btn btn-small">Download</a>
+        </div>
+
+        <div class="resource-card video-resource">
+          <div class="resource-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>Video Tutorials</h3>
+          <p>Curated YouTube playlist covering all topics</p>
+          <button id="video-modal-btn" class="btn btn-small">View Videos</button>
+        </div>
+
+        <div class="resource-card quiz-resource">
+          <div class="resource-icon">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <h3>Interactive Quiz</h3>
+          <p>Test your knowledge with practice questions</p>
+          <a href="#" class="btn btn-small">Start Quiz</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="code-playground">
+      <h2>Interactive Code Playground</h2>
+      <div class="playground-container">
+        <div class="code-editor">
+          <div class="editor-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="file-name">practice.js</span>
+          </div>
+          <textarea id="code-input" class="code-input">// Try some JavaScript here
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled);</textarea>
+        </div>
+        <div class="code-output">
+          <div class="output-header">
+            <span>Console Output</span>
+          </div>
+          <pre id="code-output" class="output-content"></pre>
+        </div>
+      </div>
+      <button id="run-code" class="btn btn-run">
+        <i class="fas fa-play"></i> Run Code
+      </button>
+    </section>
+  </main>
+
+  <div class="modal" id="video-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Recommended Video Tutorials</h3>
+      <div class="video-list" id="video-list">
+        <!-- Videos will be loaded here by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2023 JavaScript Exam Prep. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
